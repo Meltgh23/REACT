@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import EmpleadoCard from './components/EmpleadoCard';
-import Mensaje from './components/Mensaje';
+import Mensaje from './Mensaje';
 import NavBar from './components/NavBar';
 import './index.css';
 
@@ -71,13 +71,7 @@ return (
   </div>
 );
 
-  return (
-    <div>
-        <h1 class="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-    </div>
-  );
+
 }
 
 export default App

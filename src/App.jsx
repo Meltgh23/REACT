@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import Login from "./Login";
-import Dashboard from "./Dashboard"; // Aquí muestra mi tabla de empleados
+import Dashboard from "./Dashboard"; 
 
-// Ruta privada para proteger componentes
+
 function PrivateRoute({ children }) {
   const { user } = useAuth();
   return user ? children : <Navigate to="/login" />;
