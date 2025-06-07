@@ -11,21 +11,21 @@ function App() {
       nombre: "Ana Torres",
       cargo: "Desarrolladora Frontend",
       departamento: "Tecnología",
-      email: "ana.torres@empresa.com"
+      email: "ana.torres@hola.com"
     },
     {
       id: 2,
       nombre: "Luis Gómez",
       cargo: "Diseñador UX/UI",
       departamento: "Diseño",
-      email: "luis.gomez@empresa.com"
+      email: "luis.gomez@hola.com"
     },
     {
       id: 3,
       nombre: "María Ruiz",
       cargo: "Analista de Datos",
       departamento: "BI",
-      email: "maria.ruiz@empresa.com"
+      email: "maria.ruiz@hola.com"
     }
   ]);
 
