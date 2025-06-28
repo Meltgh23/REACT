@@ -5,26 +5,25 @@ import { useNavigate } from "react-router-dom";
 import "./index.css";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/dashboard");
-    } catch (err) {
-      setError("Error al iniciar sesión. Verifica tus credenciales.");
+      // Si el login fue exitoso, redirige al dashboard
+      navigate("/sistema-rrhh");
+    } catch (error) {
+      alert("Error al iniciar sesión: " + error.message);
     }
   };
 
   return (
     <div className="login-container">
-      <h2>Iniciar Sesión</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h2>Iniciar Sesión</h2>
         <input
           type="email"
           placeholder="Correo electrónico"
@@ -39,9 +38,8 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Iniciar Sesión</button>
+        <button type="submit">Ingresar</button>
       </form>
-      {error && <p className="error-message">{error}</p>}
     </div>
   );
 }

@@ -195,3 +195,97 @@ nav a:hover {
   text-align: center;
   margin-top: 1rem;
 }
+.perfil {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #e6f0ff;
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.perfil-title {
+  font-size: 26px;
+  color: #1d4ed8;
+  margin-bottom: 20px;
+}
+
+.perfil-email {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.perfil-email span {
+  background-color: #dbeafe;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.btn-logout {
+  padding: 10px 24px;
+  font-size: 16px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #b91c1c;
+}
+.empleados-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #f9fafe;
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.empleados-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.empleados-form button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.empleados-form button:hover {
+  background-color: #2563eb;
+}
+.lista-empleados {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.lista-empleados li {
+  background-color: #f3f4f6;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-left: 4px solid #3b82f6;
+  border-radius: 6px;
+}

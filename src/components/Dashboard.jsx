@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import EmpleadoCard from './components/EmpleadoCard';
-import Mensaje from './Mensaje';
-import NavBar from './components/NavBar';
-import './index.css';
+import EmpleadoCard from './Empleados';
+import Mensaje from '../Mensaje';
+import NavBar from './NavBar';
+import '../index.css';
 
 function App() {
   const [empleados, setEmpleados] = useState([
