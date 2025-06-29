@@ -1,54 +1,16 @@
 import React, { useState } from 'react';
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import { useEffect } from "react";
 import { onSnapshot, query, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
-import "../index.css";
+import '../index.css';
 
-function Empleados ({ nombre, cargo, departamento, email, onEliminar }) {
-  const [verDetalles, setVerDetalles] = useState(false);
-const guardarEmpleado = async () => {
-  try {
-    const docRef = await addDoc(collection(db, "empleados"), {
-      nombre: "Juan Pérez",
-      puesto: "Analista",
-      correo: "juan@email.com",
-    });
-    console.log("Empleado guardado con ID:", docRef.id);
-  } catch (e) {
-    console.error("Error al guardar empleado:", e);
-  }
-  const obtenerEmpleados = async () => {
-  const querySnapshot = await getDocs(collection(db, "empleados"));
-  querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data());
-  });
-};
-};
-  return (
-    <div className="empleado-card">
-      <h3>{nombre}</h3>
-      <p><strong>{cargo}</strong></p>
-      <p>{departamento}</p>
-
-      {verDetalles && <p><em>Email: {email}</em></p>}
-
-      <button onClick={() => setVerDetalles(!verDetalles)}>
-        {verDetalles ? 'Ocultar detalles' : 'Ver detalles'}
-      </button>
-
-      <button className="btn-eliminar" onClick={onEliminar}>
-        Eliminar
-      </button>
-    </div>
-  );
-};
-  function Empleadosl() {
+function Empleado() {//aqui son los estodos 
     const [nombre, setNombre] = useState("");
   const [puesto, setPuesto] = useState("");
   const [correo, setCorreo] = useState("");
   const [empleados, setEmpleados] = useState([]);
-
+//funcion para guardar empleados
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -78,6 +40,7 @@ useEffect(() => {
 
   return () => unsubscribe();
 }, []);
+//creo que aqui los re
   return (
     <div className="empleados-container">
       <h2>Registrar Empleado</h2>
@@ -118,5 +81,4 @@ useEffect(() => {
 
   );
 }
-
-export default Empleados;
+export default Empleado;

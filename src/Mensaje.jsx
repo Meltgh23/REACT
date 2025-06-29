@@ -1,9 +1,10 @@
 import React from 'react';
-
-function Mensaje({ texto }) {
+import "./index.css";
+// no me aparecia en App.jsx, por no tenia import el index.css por el estilo
+function Mensaje() {
   return (
-    <div className="Puedes comenzar PRESIONANDO el Boton EMPLEADOS">
-      <p>{texto}</p>
+    <div className="mensaje">
+      <p>puedes comensar presionando el BOTON Empleados</p>
     </div>
   );
 }

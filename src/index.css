@@ -78,7 +78,7 @@ nav a:hover {
   margin: 5px 0;
 }
 
-/* tus estilos de botones */
+
 .empleado-card button {
   margin-right: 8px;
   margin-top: 10px;
@@ -288,4 +288,8 @@ nav a:hover {
   padding: 12px;
   border-left: 4px solid #3b82f6;
   border-radius: 6px;
+}
+
+.centro-pantalla {
+text-align: center
 }

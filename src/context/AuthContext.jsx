@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase";
-
+// no habia definifo signOut ni const logout = () = > signOut (auth) y en el value no tenia el signOut
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
@@ -16,8 +16,11 @@ export function AuthProvider({ children }) {
     return () => unsubscribe();
   }, []);
 
+  const logout = () => signOut(auth)
+
+
   return (
-    <AuthContext.Provider value={{ user }}>
+    <AuthContext.Provider value={{ user, logout }}>
       {!loading && children}
     </AuthContext.Provider>
   );
