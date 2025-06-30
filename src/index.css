@@ -293,3 +293,84 @@ nav a:hover {
 .centro-pantalla {
 text-align: center
 }
+.empleados-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.empleados-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.empleados-form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.empleados-form button {
+  grid-column: span 2;
+  padding: 0.8rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.empleados-form button:hover {
+  background-color: #005fa3;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tabla-empleados {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.tabla-empleados th,
+.tabla-empleados td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.tabla-empleados th {
+  background-color: #0077cc;
+  color: white;
+}
+
+.tabla-empleados button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tabla-empleados button:first-child {
+  background-color: #ffaa00;
+  color: white;
+}
+
+.tabla-empleados button:last-child {
+  background-color: #e63946;
+  color: white;
+}
+
+.tabla-empleados button:hover {
+  opacity: 0.8;
+}
