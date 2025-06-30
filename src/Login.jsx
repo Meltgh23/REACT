@@ -50,7 +50,7 @@ const handleGoogleLogin = async () => {
         <button type="submit">Ingresar</button>
       </form>
       <hr />
-<button onClick={handleGoogleLogin}>si gustas puedes iniciar sesión con Google</button>
+<button onClick={handleGoogleLogin}>Iniciar con Google</button>
     </div>
   );
 }

@@ -10,7 +10,7 @@ function AppContainer() {
   return (
     <div className="app-container">
       <h1 className="mensaje">
-        Hola {user?.displayName || "Usuario"} //aqui puse en caso de solo iniciar con imail/contraseña:Usuario de lo contrario poner datos de perfil
+        Hola {user?.displayName || "Usuario"} 
       </h1>
     </div>
   );

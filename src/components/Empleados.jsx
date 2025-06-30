@@ -5,7 +5,7 @@ import { onSnapshot, query, orderBy,  } from "firebase/firestore";
 import { db } from "../firebase";
 import '../index.css';
 
-function Empleado() {//aqui son los estodos 
+function Empleado() { 
     const [nombre, setNombre] = useState("");
     const [apellidopaterno, setApellidopaterno] = useState("");
     const [apellidomaterno, setApellidomaterno] = useState("");
@@ -28,7 +28,7 @@ function Empleado() {//aqui son los estodos
 
     return () => unsubscribe();
   }, []);
-//aky guardo empleados
+
   const handleSubmit = async (e) => {
     e.preventDefault();
   const datosEmpleado = {
@@ -98,7 +98,7 @@ const handleEliminar = async (id) => {
         <input type="text" placeholder="Apellido Materno" value={apellidomaterno} onChange={(e) => setApellidomaterno(e.target.value)} required />
         <input type="text" placeholder="Puesto" value={puesto} onChange={(e) => setPuesto(e.target.value)} required />
         <input type="email" placeholder="Correo electrónico" value={correo} onChange={(e) => setCorreo(e.target.value)} required />
-        <input type="number" placeholder="Número" value={numero} onChange={(e) => setNumero(e.target.value)} required />
+        <input type="tel" pattern ="[0-9]{10}"placeholder="Número" value={numero} onChange={(e) => setNumero(e.target.value)} required />
         <input type="number" placeholder="NSS" value={nss} onChange={(e) => setNss(e.target.value)} required />
         <input type="text" placeholder="RFC" value={rfc} onChange={(e) => setRfc(e.target.value)} required />
 
