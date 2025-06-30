@@ -112,7 +112,11 @@ const handleEliminar = async (id) => {
             <th>Nombre</th>
             <th>Puesto</th>
             <th>Correo</th>
+            <th>Numero Telefonico</th>
+             <th>NSS</th>
+              <th>RFC</th>
             <th>Acciones</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -121,6 +125,9 @@ const handleEliminar = async (id) => {
               <td>{empleado.nombre} {empleado.apellidopaterno} {empleado.apellidomaterno}</td>
               <td>{empleado.puesto}</td>
               <td>{empleado.correo}</td>
+               <td>{empleado.numero}</td>
+                <td>{empleado.nss}</td>
+                 <td>{empleado.rfc}</td>
               <td>
                 <button onClick={() => handleEditar(empleado)}>Editar</button>
                 <button onClick={() => handleEliminar(empleado.id)}>Eliminar</button>
